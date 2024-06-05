@@ -77,5 +77,17 @@ from random import randint
 
 with open('../resource/text2.txt', 'w') as f:
     for cnt in range(6):
-        f.write(str(randint(0, 50)))
+        f.write(str(randint(1, 50)))
         f.write('\n')
+
+# 예제4
+# writelines: 리스트 -> 파일로 저장
+with open('../resource/text3.txt', 'w') as f:
+    list = ['Kim\n', 'Park\n', 'Cho\n']
+    f.writelines(list)
+
+# 예제5
+# print 문의 옵션으로 파일 쓰기
+with open('../resource/text4.txt', 'w') as f:
+    print('Test Contests1!', file=f)
+    print('Test Contests2!', file=f)
